@@ -8,4 +8,4 @@ import pytest
 @pytest.mark.parametrize('c', [i for i in range(10)])
 def test_add(a, b, c):
     time.sleep(random.random())
-    assert random.random() <= 0.9
+    assert (random.random()/2) <= 0.9
