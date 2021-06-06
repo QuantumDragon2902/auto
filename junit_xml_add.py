@@ -16,6 +16,7 @@ def recursive_glob(treeroot, pattern):
 
 def add_branch(element, branch):
     name = element.get('classname')
+    print(element)
     if '.' in name:
         name, _, restpart = name.partition('.')
         func_name = element.get('name')
@@ -26,6 +27,7 @@ def add_branch(element, branch):
 
 def process_elements(element, branch):
     for child in element:
+        print(child)
         if child.tag == 'testcase':
             add_branch(child, branch)
         else:
